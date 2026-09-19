@@ -1,12 +1,22 @@
 {
-  "name": "medisync-root",
+  "name": "medisync-backend",
   "version": "1.0.0",
-  "description": "MediSync - Connecting Medical Records for Better Care",
+  "type": "module",
+  "description": "MediSync Backend - AI healthcare information management",
+  "main": "server.js",
   "scripts": {
-    "install-all": "cd backend && npm install && cd ../frontend && npm install",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && npm run dev",
-    "dev": "echo 'Run backend and frontend in separate terminals: npm run dev:backend and npm run dev:frontend'",
-    "build": "cd frontend && npm run build"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.5",
+    "tesseract.js": "^5.1.1",
+    "uuid": "^9.0.1"
   }
 }
